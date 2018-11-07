@@ -23,6 +23,12 @@ func main() {
 	fmt.Printf("%v\n", s)
 
 	/*
-	No throws, no catch
-	 */
+		No throws, no catch
+	*/
+
+	/*
+		TODO
+		Create a function to open a file (os.Open(string))
+		Handle errors by logging them (log.fatal(...interface{}))
+	*/
 }

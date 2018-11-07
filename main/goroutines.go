@@ -1,34 +1,33 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-func display(s string) {
-	fmt.Printf("%v\n", s)
+func something() {
+	// Do something
 }
 
 func main() {
-	display("hello 1")    // Current goroutine
-	go display("hello 2") // Starts a new goroutine
-	time.Sleep(250 * time.Millisecond)
+	something()    // Current goroutine
+	go something() // Starts a new goroutine
 
 	/*
-	A goroutine is a lightweight thread (not mapped on an OS thread but a soft thread)
+		A goroutine is a lightweight thread (not mapped on an OS thread but a soft thread)
 
-	The Go execution environment decides how many threads are required
-	1 thread -> * goroutines
+		The Go execution environment decides how many threads are required
+		1 thread -> * goroutines
 
-	For a CPU-bound & parallelizable operation, the optimal number of threads is ...?
+		For a CPU-bound & parallelizable operation, the optimal number of threads is ...?
 
-	C10k problem
-	Impacts: thread memory consumption, thread creation & thread switching, TLAB size in Java etc.
+		C10k problem
+		Impacts: thread memory consumption, thread creation & thread switching, TLAB size in Java etc.
 
-	Benefits: lighter, faster to start, faster to switch
-	 */
+		Benefits: lighter, faster to start, faster to switch
+	*/
 
 	/*
-	How to communicate with a goroutine?
-	 */
+		TODO
+		Create a function to print a string and call it in another goroutine
+	*/
+
+	/*
+		How to communicate with a goroutine?
+	*/
 }

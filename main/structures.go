@@ -1,7 +1,8 @@
 package main
 
-import "fmt"
-import "bbl-golang/structures"
+import (
+	"github.com/skysoft-atm/bbl-golang/structures"
+)
 
 type pointWithAltitude struct {
 	structures.Point
@@ -32,12 +33,12 @@ func byReference(p *structures.Point) {
 
 func main() {
 	/*
-	A structure is a typed collection of field
+		A structure is a typed collection of field
 	*/
 
 	/*
-	Two ways to instantiate a structure
-	 */
+		Two ways to instantiate a structure
+	*/
 
 	// First way (instance allocation)
 	structureInstance := structures.Point{X: 1, Y: 2}
@@ -56,23 +57,21 @@ func main() {
 	byReference(&structureInstance)
 
 	/*
-	Passing by value: immutability (copy)
-	Passing by reference: performance (pointer)
-	 */
+		Passing by value: immutability (copy)
+		Passing by reference: performance (pointer)
+	*/
 
 	/*
-	No inheritance, composition only
-	 */
+		No inheritance, composition only
+	*/
 	p := pointWithAltitude{}
 	p.X = 1
 	p.Y = 2
 	p.altitude = 32.4
 
 	/*
-	NPE?
-	 */
-	var v1 a // Zeroed
-	var v2 a // Zeroed
-	v2.b.c.baz = v1.b.c.baz
-	fmt.Printf("%v\n", v2.b.c.baz)
+		TODO
+		Create a structure representing a customer (name, lastname, age)
+		Create a function returning a customer pointer from a list of inputs
+	*/
 }

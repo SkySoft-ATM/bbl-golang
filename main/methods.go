@@ -35,8 +35,8 @@ func main() {
 	c := customer{"Queen", "Elisabeth"}
 
 	/*
-	How to get a string concatenating the name and lastname?
-	 */
+		How to get a string concatenating the name and lastname?
+	*/
 
 	// Function
 	s := display1(c)
@@ -47,8 +47,8 @@ func main() {
 	fmt.Printf("%v\n", s)
 
 	/*
-	A method is just a function with a receiver argument
-	 */
+		A method is just a function with a receiver argument
+	*/
 
 	c = customer{"Queen", "Elisabeth"}
 	modifyName1(c, "Bob")
@@ -67,7 +67,12 @@ func main() {
 	fmt.Printf("Modify 4: %v\n", c)
 
 	/*
-	Value receiver: immutability, may be used in read-only methods
-	Pointer receiver: performance, to be used in update methods
-	 */
+		Value receiver: immutability, may be used in read-only methods
+		Pointer receiver: performance, to be used in update methods
+	*/
+
+	/*
+		TODO
+		Create a method called String to format customer data in a string
+	*/
 }

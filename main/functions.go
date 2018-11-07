@@ -50,4 +50,9 @@ func main() {
 		return i * i2 * rate
 	}
 	sum3(5, 7, f)
+
+	/*
+		TODO
+		Create a function to double an int
+	*/
 }
