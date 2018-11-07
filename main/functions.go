@@ -35,8 +35,11 @@ func main() {
 	n3, _ := sum2(5, 7)
 	fmt.Printf("%v\n", n3)
 
-	// Function first class support
+	// Higher order function
 	sum3(5, 7, sum)
+
+	f2 := sum4()
+	f2(5, 7)
 
 	// Function assignment, the type is optional
 	var f func(int, int) int = sum
@@ -47,8 +50,4 @@ func main() {
 		return i * i2 * rate
 	}
 	sum3(5, 7, f)
-
-	// Returns a function
-	f2 := sum4()
-	f2(5, 7)
 }
