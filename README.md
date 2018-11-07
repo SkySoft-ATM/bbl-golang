@@ -32,7 +32,3 @@ Built for [concurrency and parallelism](concurrency1.md).
 - [Goroutines](main/goroutines.go)
 - [Channels](main/channels.go)
 - [Testing & Profiling](calculator/calculator_test.go)
-
-## Conclusion
-
-Designed by Google to solve Google's problem.

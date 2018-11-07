@@ -1,8 +1,8 @@
 package calculator
 
 import (
-	"testing"
 	"github.com/magiconair/properties/assert"
+	"testing"
 )
 
 // go test .
@@ -33,9 +33,14 @@ Tracing:
 	go tool trace trace.out
 
 Memory profiling, network latency (Go 1.11) etc.
- */
+*/
 func Benchmark(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		// ...
 	}
 }
+
+/*
+TODO
+Create an unit test for the function doubling an int
+*/
