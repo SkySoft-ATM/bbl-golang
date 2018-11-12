@@ -7,8 +7,8 @@ func main() {
 	var slice []string
 
 	/*
-	Slicing an existing array (reference to an array)
-	 */
+		Slicing an existing array (reference to an array)
+	*/
 
 	slice = array[0:5]
 	slice = array[:]  // low:high
@@ -22,17 +22,30 @@ func main() {
 	fmt.Printf("%v\n", slice)  // d, m, x
 
 	/*
-	Creating a new slice
-	 */
+		Length vs capacity
+	*/
 
-	slice2 := make([]int, 5) // type, length (and capacity)
-	fmt.Printf("%v\n", slice2)
+	s1 := make([]int, 0)
+	s1 = append(s1, 1)
+	s1 = append(s1, 2)
+	s1 = append(s1, 3)
+	fmt.Printf("%v\n", s1) // [1 2 3]
 
-	slice3 := []int{1, 2, 3, 4, 5}
-	fmt.Printf("%v\n", len(slice3)) // 5
-	slice3 = append(slice3, 6)
-	fmt.Printf("%v\n", len(slice3)) // 6
+	s2 := make([]int, 0, 3)
+	s2 = append(s2, 1)
+	s2 = append(s2, 2)
+	s2 = append(s2, 3)
+	fmt.Printf("%v\n", s2) // [1 2 3]
 
-	var slice4 []int
-	fmt.Printf("%v\n", len(slice4)) // 0
+	s3 := make([]int, 3, 3)
+	s3[0] = 1
+	s3[1] = 2
+	s3[2] = 3
+	fmt.Printf("%v\n", s3) // [1 2 3]
+
+	s4 := make([]int, 3, 3)
+	s4 = append(s4, 1)
+	s4 = append(s4, 2)
+	s4 = append(s4, 3)
+	fmt.Printf("%v\n", s4) // [0 0 0 1 2 3]
 }
