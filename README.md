@@ -32,3 +32,26 @@ Built for [concurrency and parallelism](concurrency1.md).
 - [Goroutines](main/goroutines.go)
 - [Channels](main/channels.go)
 - [Testing & Profiling](calculator/calculator_test.go)
+
+## Merge sort problem
+
+```go
+func mergeSort(s []int) {
+	len := len(s)
+
+	if len > 1 {
+		middle := len / 2
+		mergeSort(s[:middle])
+		mergeSort(s[middle:])
+
+		merge(s, middle)
+	}
+}
+
+/*
+Example: 1, 4, 2, 3 => 1, 2, 3, 4
+*/
+func merge(s []int, middle int) {
+	// Merge two halves
+}
+```
